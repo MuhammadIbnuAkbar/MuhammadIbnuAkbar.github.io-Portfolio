@@ -1,0 +1,289 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #4caf50;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #212121, #333333);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#hero p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+/* Section Titles */
+section h1, section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e0e0e0;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+section h1::after, section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #4caf50;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Lists */
+ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    width: auto;
+}
+
+ul li::before {
+    content: '\2022';
+    color: #4caf50;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Portfolio Section */
+#portfolio ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+#portfolio ul li {
+    background: #1f1f1f;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+#portfolio ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contact a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#contact a:hover {
+    color: #66bb6a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #1f1f1f;
+    color: #e0e0e0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #66bb6a;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+#hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-photo {
+    width: 80%; /* Menyesuaikan lebar foto agar lebih kecil */
+    height: auto;
+    filter: brightness(70%) contrast(120%) saturate(130%);
+    border-radius: 10px; /* Menambahkan sudut melengkung */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Mempercepat transisi */
+    margin-top: 20px; /* Memberikan ruang di atas foto */
+}
+
+.hero-photo:hover {
+    transform: scale(1.03); /* Zoom sedikit lebih kecil */
+    filter: brightness(100%) contrast(100%) saturate(150%);
+}
+
+h1 {
+    font-size: 2rem; /* Mengurangi ukuran font judul */
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 20px; /* Memberikan jarak lebih pada bagian atas */
+}
+
+p {
+    font-size: 1rem; /* Mengurangi ukuran font deskripsi */
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+}
+
+
+/* Slider di Halaman About */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Optional: Tambahkan navigasi jika diinginkan */
+.slider::before, .slider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider::before {
+    left: 10px;
+    background-image: url('path/to/left-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slider::after {
+    right: 10px;
+    background-image: url('path/to/right-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
